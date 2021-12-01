@@ -5,28 +5,26 @@ const connect = function () {
   const conn = net.createConnection({
     host: '165.227.47.243',
     port: 50541
-  });
+});
 
   // name is display on snake when connected to server
   conn.on('connect', () => {
     conn.write('Name: DLU'); 
   })
   
-  
-  conn.on('connect', () => {
+  // conn.on('connect', () => {
     
-      setInterval(() => {
-        conn.write('Move: up')
-      }, 500
-      );
-      setTimeout(() => {
-        setInterval(() => {
-          conn.write('Move: right')
-        }, 500 
-        );
-    })
-
-  })
+  //     setInterval(() => {
+  //       conn.write('Move: up')
+  //     }, 500
+  //     );
+  //     setTimeout(() => {
+  //       setInterval(() => {
+  //         conn.write('Move: right')
+  //       }, 500 
+  //       );
+  //   })
+  // })
 
   conn.setEncoding("utf8");
   
