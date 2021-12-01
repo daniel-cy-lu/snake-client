@@ -11,6 +11,22 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write('Name: DLU'); 
   })
+  
+  
+  conn.on('connect', () => {
+    
+      setInterval(() => {
+        conn.write('Move: up')
+      }, 500
+      );
+      setTimeout(() => {
+        setInterval(() => {
+          conn.write('Move: right')
+        }, 500 
+        );
+    })
+
+  })
 
   conn.setEncoding("utf8");
   
