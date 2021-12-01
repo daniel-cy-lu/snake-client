@@ -6,6 +6,10 @@ const connect = function () {
     port: 50541
   });
 
+  conn.on('connect', () => {
+    conn.write('Name: DLU'); 
+  })
+
   conn.setEncoding("utf8");
   
   conn.on('data', (data) => {
