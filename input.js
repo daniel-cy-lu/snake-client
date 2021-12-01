@@ -16,6 +16,10 @@ const handleUserInput = function (key) {
   } else if (key === 'd') {
     console.log('D is pressed');
     connection.write('Move: right');
+  } else if (key === 'n') {
+    connection.write('Say: Ni Hao');
+  } else if (key === 'v') {
+    connection.write('Say: I win!')
   }
 }
 
